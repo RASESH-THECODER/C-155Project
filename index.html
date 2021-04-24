@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script src="https://aframe.io/releases/0.6.0/aframe.min.js"></script>
+    
+    <script src="https://cdn.jsdelivr.net/gh/n5ro/aframe-physics-system@v4.0.1/dist/aframe-physics-system.min.js"></script>
+
+    
+    
+    
+  </head>
+
+  <body>
+    <a-scene background="color:#026F90">
+      <a-entity id="look" look-controls camera position="0 2 20"></a-entity>
+
+      
+      <!-- Terrain  -->
+      <a-entity
+        id="terrain"
+        gltf-model="#terrainMap"
+        position="0 0 -100"
+        scale="0.3 0.3 0.3"
+        animation="property: position; to: 0 0 1000;easing:linear; loop: true; dur: 150000"
+        terrain-rotation-reader
+        target-ring
+        flying-birds
+      >
+      </a-entity>
+
+      <!-- Scuba Driver -->
+      <a-entity
+        id="scuba_model"
+        gltf-model="#plane"
+        position="0 0 15"
+        scale="1 1 1"
+        rotation="0 90 0"
+        scuba-rotation-reader        
+        
+      >
+      </a-entity>
+      
+
+    </a-scene>
+  </body>
+</html>
+
+
+
+
